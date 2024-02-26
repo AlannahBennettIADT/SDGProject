@@ -18,54 +18,33 @@
 
                     <button type="button" class="btn btn-link">Link</button>
                 </div>
-
-                <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
+                <div class="row row-cols-1 row-cols-md-4 g-4 mt-5">
+                    @foreach ($courses as $course)
                     <div class="col">
-                        <div class="card">
-                            <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png"
-                                class="card-img-top" alt="...">
+                        <h5 class="card-title">{{ $course->course_sponsor }}</h5>
+                        <div class="card" style="width: 18rem;">
+                            @if ($course->course_image)
+                                <img src="{{ $course->course_image }}" class="card-img-top" alt="Course Image">
+                            @else
+                                No image
+                            @endif
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                    to additional content. This content is a little bit longer.</p>
+                                <h5 class="card-title">{{ $course->title }}</h5>
+                                <p class="card-text">{{ $course->description }}</p>
+                                <p class="card-text">Start Date: {{ $course->start_date }}</p>
+                                <p class="card-text">End Date: {{ $course->end_date }}</p>
+                                <p class="card-text">Enrollment Deadline: {{ $course->enrollment_deadline }}</p>
+                                <a href="#" class="btn btn-primary">Apply For Course</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png"
-                                class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                    to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png"
-                                class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                    to additional content.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card">
-                            <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-social.png"
-                                class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in
-                                    to additional content. This content is a little bit longer.</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
+
+    
             </div>
         </div>
+
+        
     </div>
 @endsection

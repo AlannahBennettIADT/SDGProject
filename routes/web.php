@@ -3,6 +3,13 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\CourseController;
+use App\Models\Course;
+
+
+use App\Http\Controllers\Auth\RegisterController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -28,8 +35,22 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
+Route::resource('courses', CourseController::class);
+
+
+Route::get('/', function () {
+    $courses = Course::all(); 
+    return view('welcome', ['courses' => $courses]);
+});
+
+Route::post('/register', [RegisterController::class, 'register'])->name('register');
+
+
 require __DIR__.'/auth.php';
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
