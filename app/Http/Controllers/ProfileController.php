@@ -9,8 +9,21 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
+use App\Models\Role;
+
 class ProfileController extends Controller
 {
+
+
+
+    public function index()
+    {
+        $user = Auth::user();
+        $roles = $user->roles; // Assuming a user can have multiple roles
+        return view('profiles.index', compact('user', 'roles'));
+    }
+
+
     /**
      * Display the user's profile form.
      */
@@ -18,6 +31,7 @@ class ProfileController extends Controller
     {
         return view('profile.edit', [
             'user' => $request->user(),
+
         ]);
     }
 

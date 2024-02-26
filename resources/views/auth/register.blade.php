@@ -66,6 +66,9 @@
                             <select name="role" id="role" class="form-control">
                                 <option value="admin">Admin</option>
                                 <option value="user">User</option>
+                                <option value="working">Working</option>
+                                <option value="student">Student</option>
+                                <option value="employer">Employer</option>
                             </select>
                         </div>
 

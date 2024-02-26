@@ -34,9 +34,10 @@
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
+                        <x-dropdown-link :href="route('profile.index')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
+                        
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
@@ -47,8 +48,10 @@
                                                 this.closest('form').submit();">
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
+
                         </form>
-                    </x-slot>
+
+                             </x-slot>
                 </x-dropdown>
             </div>
 
@@ -93,6 +96,7 @@
                                         this.closest('form').submit();">
                         {{ __('Log Out') }}
                     </x-responsive-nav-link>
+
                 </form>
             </div>
         </div>
