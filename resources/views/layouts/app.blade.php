@@ -23,6 +23,22 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <h4>My Website Name </h4>
                 </a>
+
+                <!-- nav links -->
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    <h6>Blogs</h6>
+                </a>    
+                <a class="navbar-brand" href="{{ url('/courses') }}">
+                    <h6>Courses</h6>
+                </a>   
+                <a class="navbar-brand" href="{{ url('/search-jobs') }}">
+                    <h6>Job Board</h6>
+                </a>   
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    <h6>Mentorship Program</h6>
+                </a>   
+
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>

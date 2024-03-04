@@ -9,6 +9,8 @@ use App\Models\Course;
 
 use App\Http\Controllers\Auth\RegisterController;
 
+use App\Http\Controllers\JobSearchController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +48,10 @@ Route::get('/', function () {
 });
 
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
+
+
+// routes/web.php
+Route::get('/search-jobs', [JobSearchController::class, 'search'])->name('searchJobs');
 
 
 require __DIR__.'/auth.php';
