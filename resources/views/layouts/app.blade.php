@@ -37,6 +37,9 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     <h6>Mentorship Program</h6>
                 </a>   
+                <a class="navbar-brand" href="{{ url('/events') }}">
+                    <h6>Events</h6>
+                </a> 
 
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -94,7 +97,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
     </div>

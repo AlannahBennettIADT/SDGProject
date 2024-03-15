@@ -11,6 +11,11 @@ use App\Http\Controllers\Auth\RegisterController;
 
 use App\Http\Controllers\JobSearchController;
 
+use App\Http\Controllers\TedTalksController;
+
+use App\Http\Controllers\EventbriteController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -54,10 +59,12 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 Route::get('/search-jobs', [JobSearchController::class, 'search'])->name('searchJobs');
 
 
+Route::get('/events', [EventbriteController::class, 'index'])->name('events.index');
+
 require __DIR__.'/auth.php';
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+Route::get('/ted-talks', [TedTalksController::class, 'index'])->name('ted-talks.index');
 
