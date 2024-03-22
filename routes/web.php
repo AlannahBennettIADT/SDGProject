@@ -7,6 +7,7 @@ use App\Http\Controllers\CourseController;
 use App\Models\Course;
 
 
+
 use App\Http\Controllers\Auth\RegisterController;
 
 use App\Http\Controllers\JobSearchController;
@@ -60,6 +61,14 @@ Route::get('/search-jobs', [JobSearchController::class, 'search'])->name('search
 
 
 Route::get('/events', [EventbriteController::class, 'index'])->name('events.index');
+
+// web.php
+
+Route::get('/courses', [CourseController::class, 'index'])->name('courses.index');
+
+
+
+
 
 require __DIR__.'/auth.php';
 

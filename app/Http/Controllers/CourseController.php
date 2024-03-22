@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Models\Course;
 
 class CourseController extends Controller
@@ -11,11 +10,34 @@ class CourseController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
-        $courses = Course::all();
-        return view('courses.index',compact('courses'));
+
+        if ($request->has('search')) {
+            $search = $request->input('search');
+            // Perform search query
+            $courses = Course::where('title', 'like', '%' . $search . '%')
+                             ->paginate(10);
+        } else {
+            // Fetch all courses
+            $courses = Course::paginate(10);
+        }
+        return view('courses.index', compact('courses'));
+    }
+
+    /**
+     * Search for courses.
+     */
+    public function search(Request $request)
+    {
+        $request->validate([
+            'search' => 'required|string|max:255', // Validate search input
+        ]);
+
+        $search = $request->input('search');
+        $courses = Course::where('title', 'like', '%' . $search . '%')
+                         ->paginate(10); // Paginate search results
+        return view('courses.index', compact('courses', 'search'));
     }
 
     /**
@@ -27,17 +49,18 @@ class CourseController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Display the specified resource.
      */
-    public function store(Request $request)
+    public function show($id)
     {
-        //
+        $course = Course::findOrFail($id); // Retrieve the course by its ID or throw a 404 error if not found
+        return view('courses.show', compact('course'));
     }
 
     /**
-     * Display the specified resource.
+     * Store a newly created resource in storage.
      */
-    public function show(course $course)
+    public function store(Request $request)
     {
         //
     }
@@ -66,3 +89,4 @@ class CourseController extends Controller
         //
     }
 }
+
