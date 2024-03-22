@@ -21,7 +21,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <h4>My Website Name </h4>
+                    <h5>SDG-5: Gender Equality </h5>
                 </a>
 
                 <!-- nav links -->
@@ -34,7 +34,7 @@
                 <a class="navbar-brand" href="{{ url('/search-jobs') }}">
                     <h6>Job Board</h6>
                 </a>   
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/mentorship') }}">
                     <h6>Mentorship Program</h6>
                 </a>   
                 <a class="navbar-brand" href="{{ url('/events') }}">

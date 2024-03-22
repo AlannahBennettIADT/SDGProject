@@ -12,7 +12,7 @@ class EventbriteController extends Controller
         // Make request to RapidAPI endpoint to fetch technology events
         $response = Http::withHeaders([
             'X-RapidAPI-Host' => 'real-time-events-search.p.rapidapi.com',
-            'X-RapidAPI-Key' => '93762778bfmsh6e144875c579c72p11c56bjsneb80b286093c',
+            'X-RapidAPI-Key' => '6df2a8a016msh4a6435bb84d1024p19b4dbjsn224da9b21ffa',
         ])->get('https://real-time-events-search.p.rapidapi.com/search-events', [
             'query' => 'code',
             'start' => 0, // Start index for pagination, adjust as needed

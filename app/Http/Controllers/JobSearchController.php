@@ -15,7 +15,7 @@ class JobSearchController extends Controller
         // Make request to RapidAPI endpoint and retrieve search results
         $response = Http::withHeaders([
             'X-RapidAPI-Host' => 'jsearch.p.rapidapi.com',
-            'X-RapidAPI-Key' => '93762778bfmsh6e144875c579c72p11c56bjsneb80b286093c',
+            'X-RapidAPI-Key' => '6df2a8a016msh4a6435bb84d1024p19b4dbjsn224da9b21ffa',
         ])->get('https://jsearch.p.rapidapi.com/search', [
             'query' => $query,
             'page' => 1, // Adjust as needed

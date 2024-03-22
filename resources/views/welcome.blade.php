@@ -28,7 +28,20 @@
                         <h2>Statistics</h2>
                     </div>
                     <div class="col-md-8">
-                        <!-- Insert your statistics display code here -->
+                    @if (!empty($statistics))
+                        <h2>Statistics related to women and girls in STEM:</h2>
+                        <ul>
+                            @foreach ($statistics['indicators'] as $indicator)
+                                <li>
+                                    <strong>Code:</strong> {{ $indicator['code'] }}<br>
+                                    <strong>Description:</strong> {{ $indicator['description'] }}<br>
+                                    <strong>Percentage:</strong> {{ $indicator['percentage'] }}<br>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @else
+                        <p>No statistics aaa.</p>
+                    @endif
                     </div>
                 </div>
             </div>
@@ -60,7 +73,7 @@
                                     <p class="card-text">Start Date: {{ $course->start_date }}</p>
                                     <p class="card-text">End Date: {{ $course->end_date }}</p>
                                     <p class="card-text">Enrollment Deadline: {{ $course->enrollment_deadline }}</p>
-                                    <a href="#" class="btn btn-primary btn-block">Apply For Course</a>
+                                    <a href="{{ route('courses.show', $course->id) }}" class="btn btn-primary btn-block">View Details</a>
                                 </div>
                             </div>
                         </div>

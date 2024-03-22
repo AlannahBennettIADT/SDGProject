@@ -8,6 +8,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+use App\Http\Controllers\CourseController;
+use App\Models\Course;
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -69,5 +72,10 @@ class User extends Authenticatable
     public function hasAnyRole($roles)
     {
         return null !== $this->roles()->whereIn('name', $roles)->first();
+    }
+
+    public function applied_courses()
+    {
+        return $this->belongsToMany(Course::class, 'user_course', 'user_id', 'course_id')->withTimestamps();
     }
 }

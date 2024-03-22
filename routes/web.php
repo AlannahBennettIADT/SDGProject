@@ -2,11 +2,15 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 use App\Http\Controllers\CourseController;
 use App\Models\Course;
 
-
+use App\Http\Controllers\MentorController;
+use App\Http\Controllers\MenteeController;
+use App\Http\Controllers\MentorshipController;
 
 use App\Http\Controllers\Auth\RegisterController;
 
@@ -15,7 +19,7 @@ use App\Http\Controllers\JobSearchController;
 use App\Http\Controllers\TedTalksController;
 
 use App\Http\Controllers\EventbriteController;
-
+use App\Http\Controllers\StatisticsController;
 
 
 /*
@@ -48,10 +52,18 @@ Route::middleware('auth')->group(function () {
 Route::resource('courses', CourseController::class);
 
 
+// Route for fetching courses
 Route::get('/', function () {
     $courses = Course::all(); 
     return view('welcome', ['courses' => $courses]);
 });
+
+
+
+
+
+
+
 
 Route::post('/register', [RegisterController::class, 'register'])->name('register');
 
@@ -62,10 +74,21 @@ Route::get('/search-jobs', [JobSearchController::class, 'search'])->name('search
 
 Route::get('/events', [EventbriteController::class, 'index'])->name('events.index');
 
+
+Route::get('/profiles', [ProfileController::class, 'index'])->name('profiles.index');
 // web.php
 
 Route::get('/courses', [CourseController::class, 'index'])->name('courses.index');
+Route::get('/courses/{course}', [CourseController::class, 'show'])->name('courses.show');
+Route::get('/courses/{course}/apply', [CourseController::class, 'apply'])->name('courses.apply');
+Route::delete('/courses/{course}/remove', [CourseController::class, 'remove'])->name('courses.remove');
+Route::post('/courses/{id}/apply', [CourseController::class, 'apply'])->name('courses.apply');
 
+
+Route::post('/mentor/register', [MentorController::class, 'register'])->name('mentor.register');
+
+Route::post('/mentee/register', [MenteeController::class, 'register'])->name('mentee.register');
+Route::get('/mentorship', [MentorshipController::class, 'index'])->name('mentorship.index');
 
 
 
