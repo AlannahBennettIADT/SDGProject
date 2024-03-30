@@ -22,7 +22,7 @@
                                 <strong>Address:</strong> {{ $event['venue']['full_address'] }}<br>
                                 <strong>Link:</strong> <a href="{{ $event['link'] }}" target="_blank">{{ $event['link'] }}</a>
                             </p>
-                            <!-- <p class="card-text">{{ $event['description'] }}</p> -->
+                            
                         </div>
                     </div>
                 </div>

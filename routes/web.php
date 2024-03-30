@@ -22,6 +22,8 @@ use App\Http\Controllers\EventbriteController;
 use App\Http\Controllers\StatisticsController;
 
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +39,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('/', function () {
+    // Fetch courses
+    $courses = Course::all(); 
+    
+    // Fetch statistics
+    $statisticsController = new StatisticsController();
+    $statistics = $statisticsController->getStatistics();
+
+    // Return the "welcome" view with both courses and statistics
+    return view('welcome', ['courses' => $courses, 'statistics' => $statistics]);
+});
+
+
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -51,12 +69,6 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('courses', CourseController::class);
 
-
-// Route for fetching courses
-Route::get('/', function () {
-    $courses = Course::all(); 
-    return view('welcome', ['courses' => $courses]);
-});
 
 
 
