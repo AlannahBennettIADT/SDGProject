@@ -97,9 +97,10 @@ Route::delete('/courses/{course}/remove', [CourseController::class, 'remove'])->
 Route::post('/courses/{id}/apply', [CourseController::class, 'apply'])->name('courses.apply');
 
 
-Route::post('/mentor/register', [MentorController::class, 'register'])->name('mentor.register');
+Route::post('/mentor/register', [MentorshipController::class, 'registerMentor'])->name('mentor.register');
 
-Route::post('/mentee/register', [MenteeController::class, 'register'])->name('mentee.register');
+Route::post('/mentee/register', [MentorshipController::class, 'registerMentee'])->name('mentee.register');
+
 Route::get('/mentorship', [MentorshipController::class, 'index'])->name('mentorship.index');
 
 

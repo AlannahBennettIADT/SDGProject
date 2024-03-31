@@ -1,8 +1,9 @@
-<!-- mentorship-index.blade.php -->
-
 @extends('layouts.app')
 
 @section('content')
+
+
+
 <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -10,7 +11,7 @@
                 <div class="card-header">
                     <h2 class="text-center">Mentorship Program</h2>
                 </div>
-                <div class="card-body bg-light"> <!-- Added background color -->
+                <div class="card-body bg-light">
                     <div class="row">
                         <div class="col-md-6 mb-4">
                             <div class="card">
@@ -36,7 +37,7 @@
                                             <label for="mentor_description">Description</label>
                                             <textarea class="form-control" id="mentor_description" name="mentor_description" rows="3" required></textarea>
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                                        <button type="submit" class="btn btn-primary btn-block">Register as Mentor</button>
                                     </form>
                                 </div>
                             </div>
@@ -65,7 +66,7 @@
                                             <label for="mentee_experience">Experience</label>
                                             <textarea class="form-control" id="mentee_experience" name="mentee_experience" rows="3" required></textarea>
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                                        <button type="submit" class="btn btn-primary btn-block">Register as Mentee</button>
                                     </form>
                                 </div>
                             </div>

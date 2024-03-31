@@ -45,6 +45,17 @@ class RoleSeeder extends Seeder
         $role_employer->save();
 
 
+        $role_mentor = new Role();
+        $role_mentor -> name = 'mentor';
+        $role_mentor->description = 'A mentor user';
+        $role_mentor->save();
+
+
+        $role_mentee = new Role();
+        $role_mentee -> name = 'mentee';
+        $role_mentee->description = 'A mentee user';
+        $role_mentee->save();
+
         
     }
 }

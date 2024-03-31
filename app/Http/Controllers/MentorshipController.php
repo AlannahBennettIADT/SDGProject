@@ -3,63 +3,58 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Role;
+use Illuminate\Support\Facades\Auth; 
 
 class MentorshipController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
+
+    public function index(){
         return view('mentorship.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+
+
+    public function registerMentor(Request $request)
+{
+    // Retrieve the currently authenticated user
+    $user = Auth::user();
+
+    // Find the 'mentor' role
+    $mentorRole = Role::where('name', 'mentor')->first();
+
+    // Check if the 'mentor' role exists
+    if (!$mentorRole) {
+        // Handle the case where the role doesn't exist
+        return redirect()->back()->with('error', 'Mentor role not found');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
+    // Attach the 'mentor' role to the user
+    $user->roles()->syncWithoutDetaching([$mentorRole->id]);
+
+    // Redirect the user to their profile with a success message
+    return redirect()->route('profiles.index', $user->id)->with('success', 'You have successfully applied to become a mentor.');
+}
+
+public function registerMentee(Request $request)
+{
+    // Retrieve the currently authenticated user
+    $user = Auth::user();
+
+    // Find the 'mentee' role
+    $menteeRole = Role::where('name', 'mentee')->first();
+
+    // Check if the 'mentee' role exists
+    if (!$menteeRole) {
+        // Handle the case where the role doesn't exist
+        return redirect()->back()->with('error', 'Mentee role not found');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(string $id)
-    {
-        //
-    }
+    // Attach the 'mentee' role to the user
+    $user->roles()->syncWithoutDetaching([$menteeRole->id]);
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(string $id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
+    // Redirect the user to their profile with a success message
+    return redirect()->route('profiles.index', $user->id)->with('success', 'You have successfully applied to become a mentee.');
+}
 }
