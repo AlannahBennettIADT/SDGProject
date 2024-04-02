@@ -43,7 +43,7 @@
                                         </form>
                                     @else
                                         <!-- Display apply course button -->
-                                        <form action="{{ route('courses.apply', $course->id) }}" method="POST">
+                                        <form id="applyForm" action="{{ route('courses.apply', $course->id) }}" method="POST">
                                             @csrf
                                             <button type="submit" class="btn btn-primary">Apply For Course</button>
                                         </form>
@@ -56,7 +56,31 @@
                     </div>
                 </div>
             </div>
+
+            <div class="card mt-4 my-5">
+                <div class="card-header" style="background-color: #2F6866; color: white;">
+                    <h2 class="text-center">Lessons</h2>
+                </div>
+                <div class="card-body">
+                    @if(Auth::check() && Auth::user()->applied_courses->contains($course->id))
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                <span class="sr-only">25% Complete</span>
+                            </div>
+                        </div>
+                            <button class="btn btn-primary btn-block mb-2">Lesson 1: Introduction to {{ $course->title }}</button>
+                            <p>This lesson provides an overview of {{ $course->title }}.</p>
+                            <button class="btn btn-primary btn-block mb-2">Lesson 2: {{ $course->title }} Basics</button>
+                            <p>This lesson covers the basics of {{ $course->title }}.</p>
+                            <button class="btn btn-primary btn-block mb-2">Lesson 3: Advanced Topics in {{ $course->title }}</button>
+                            <p>This lesson delves into advanced topics related to {{ $course->title }}.</p>
+                    @else
+                        <p>Please apply for this course to access the lessons.</p>
+                    @endif
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
 @endsection

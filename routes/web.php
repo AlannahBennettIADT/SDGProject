@@ -21,6 +21,8 @@ use App\Http\Controllers\TedTalksController;
 use App\Http\Controllers\EventbriteController;
 use App\Http\Controllers\StatisticsController;
 
+use App\Http\Controllers\BlogController;
+
 
 
 
@@ -69,7 +71,7 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('courses', CourseController::class);
 
-
+Route::resource('blogs', 'BlogController');
 
 
 
@@ -85,6 +87,8 @@ Route::get('/search-jobs', [JobSearchController::class, 'search'])->name('search
 
 
 Route::get('/events', [EventbriteController::class, 'index'])->name('events.index');
+
+Route::post('/events/save', [EventbriteController::class, 'save'])->name('events.save');
 
 
 Route::get('/profiles', [ProfileController::class, 'index'])->name('profiles.index');
@@ -102,6 +106,8 @@ Route::post('/mentor/register', [MentorshipController::class, 'registerMentor'])
 Route::post('/mentee/register', [MentorshipController::class, 'registerMentee'])->name('mentee.register');
 
 Route::get('/mentorship', [MentorshipController::class, 'index'])->name('mentorship.index');
+
+Route::resource('blogs', BlogController::class);
 
 
 

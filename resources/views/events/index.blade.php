@@ -17,12 +17,18 @@
                             <h5 class="card-title">{{ $event['name'] }}</h5>
                             <p class="card-text">
                                 <strong>Start Time:</strong> {{ $event['start_time'] }}<br>
-                    
-                              
                                 <strong>Address:</strong> {{ $event['venue']['full_address'] }}<br>
                                 <strong>Link:</strong> <a href="{{ $event['link'] }}" target="_blank">{{ $event['link'] }}</a>
                             </p>
-                            
+                            <!-- Add button to save event -->
+                            <!-- <form action="{{ route('events.save') }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="name" value="{{ $event['name'] }}">
+                            <input type="hidden" name="start_time" value="{{ $event['start_time'] }}">
+                            <input type="hidden" name="venue_address" value="{{ $event['venue']['full_address'] }}">
+                            <input type="hidden" name="link" value="{{ $event['link'] }}">
+                            <button type="submit" class="btn btn-primary">Save Event</button>
+                        </form> -->
                         </div>
                     </div>
                 </div>

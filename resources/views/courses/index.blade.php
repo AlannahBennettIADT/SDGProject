@@ -49,11 +49,6 @@
             </div>
         @endforelse
     </div>
-    {{-- Pagination Links --}}
-    <div class="row">
-        <div class="col-12">
-            {{ $courses->links() }}
-        </div>
-    </div>
+
 </div>
 @endsection

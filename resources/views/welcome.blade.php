@@ -17,6 +17,7 @@
 </header>
 
 
+
     <!-- Main Content Section -->
     <div class="container">
 
@@ -53,17 +54,6 @@
         @endforeach
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -192,7 +182,5 @@
             <p>Powered by SDG-5: Achieve gender equality and empower all women and girls</p>
         </div>
     </footer>
-
-
 
 @endsection

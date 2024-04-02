@@ -25,7 +25,7 @@
                 </a>
 
                 <!-- nav links -->
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand" href="{{ url('/blogs') }}">
                     <h6>Blogs</h6>
                 </a>    
                 <a class="navbar-brand" href="{{ url('/courses') }}">

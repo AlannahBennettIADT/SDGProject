@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use App\Models\User;
+
+
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class EventbriteController extends Controller
 {
@@ -44,4 +49,28 @@ class EventbriteController extends Controller
         // Pass event details to the view
         return view('events.index', ['eventDetails' => $eventDetails]);
     }
+
+
+    // public function save(Request $request)
+    // {
+    //     // Get the authenticated user
+    //     $user = Auth::user();
+
+    //     // Validate the request data if needed
+
+    //     // Save the event details to the database
+    //     DB::table('user_events')->insert([
+    //         'user_id' => $user->id,
+    //         'name' => $request->input('event_name'),
+    //         'start_time' => $request->input('start_time'),
+    //         'venue_address' => $request->input('venue_address'),
+    //         'link' => $request->input('event_link'),
+    //         'created_at' => now(),
+    //         'updated_at' => now(),
+    //     ]);
+
+    //     // Redirect back or to a specific route
+    //     return back()->with('success', 'Event saved successfully.');
+    // }
+
 }
