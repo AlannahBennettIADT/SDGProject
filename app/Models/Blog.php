@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Comment;
 
 class Blog extends Model
 {
@@ -16,6 +17,10 @@ class Blog extends Model
         'tags',
         'publish_date',
         'blog_image',
-        'comments',
     ];
+
+    public function comments()
+{
+    return $this->hasMany(Comment::class);
+}
 }

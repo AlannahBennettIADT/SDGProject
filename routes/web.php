@@ -24,6 +24,8 @@ use App\Http\Controllers\StatisticsController;
 use App\Http\Controllers\BlogController;
 
 
+use App\Http\Controllers\CommentController;
+
 
 
 /*
@@ -73,6 +75,8 @@ Route::resource('courses', CourseController::class);
 
 Route::resource('blogs', 'BlogController');
 
+
+Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
 
 
 
