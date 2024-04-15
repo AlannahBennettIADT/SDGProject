@@ -18,8 +18,8 @@ class JobSearchController extends Controller
             'X-RapidAPI-Key' => '6df2a8a016msh4a6435bb84d1024p19b4dbjsn224da9b21ffa',
         ])->get('https://jsearch.p.rapidapi.com/search', [
             'query' => $query,
-            'page' => 1, // Adjust as needed
-            'num_pages' => 5, // Adjust as needed
+            'page' => 1, 
+            'num_pages' => 5, 
         ]);
     
         // Check if response is successful
