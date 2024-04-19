@@ -109,8 +109,8 @@
 
                 <p class="text-center">Join us today to take advantage of these benefits and embark on a rewarding mentorship journey!</p>
                     <div class="text-center">
-                        <a class="btn btn-primary btn-lg" href="{{ route('register') }}" role="button">Register Now</a>
-                        <a class="btn btn-outline-primary btn-lg" href="{{ route('login') }}" role="button">Login</a>
+                        <a class="btn btn-light btn-lg" href="{{ route('register') }}" role="button">Register Now</a>
+                        <a class="btn btn-outline-light btn-lg" href="{{ route('login') }}" role="button">Login</a>
                     </div>
             </body>
 

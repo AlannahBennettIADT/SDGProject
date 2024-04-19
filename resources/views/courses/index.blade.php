@@ -1,24 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="text-center my-5">
-        <h1>Welcome to Our Courses</h1>
-        <p>Explore our wide range of educational opportunities</p>
-    </div>
-    <div class="row mb-4">
-        <div class="col-md-6 mx-auto">
-            <form action="{{ route('courses.index') }}" method="GET" class="form-inline">
-                <div class="input-group">
-                    <input type="text" name="search" class="form-control" placeholder="Search for courses...">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="submit">Search</button>
-                    </div>
+    <div class="py-5" style="height: 250px; background-image: url('/images/bg2.jpg'); background-size: cover; background-position: center; text-align: center; color: white;">
+        <div class="text-center ">
+                <h1>Welcome to Our Courses</h1>
+                <p>Explore our wide range of educational opportunities</p>
+            </div>
+
+            
+            <div class="row mb-4">
+                <div class="col-md-6 mx-auto">
+                    <form action="{{ route('courses.index') }}" method="GET" class="form-inline">
+                        <div class="input-group">
+                            <input type="text" name="search" class="form-control" placeholder="Search for courses...">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="submit">Search</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </div>
+            </div>
     </div>
-    <h2 class="mb-4 text-center">All Courses</h2>
+
+
+<div class="container">
+    <h2 class="mb-4 text-center py-3">All Courses</h2>
     <div class="row row-cols-1 row-cols-md-3">
         @forelse ($courses as $course)
             <div class="col mb-4">

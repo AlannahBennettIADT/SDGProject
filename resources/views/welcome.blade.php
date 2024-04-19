@@ -4,6 +4,7 @@
     <!-- Header Section -->
     <header class="header-section" style="background-color: #2F6866; color: #E8F6FD;">
     <div class="container">
+    
         <div class="row align-items-center">
             <div class="col-md-4 text-center text-md-left mb-4 mb-md-0">
                 <h1>Welcome to Our Learning Platform</h1>
