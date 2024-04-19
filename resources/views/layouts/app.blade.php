@@ -18,10 +18,11 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm py-2">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <h5>SDG-5: Gender Equality </h5>
+                    <!-- <h5>SDG-5: Gender Equality </h5> -->
+                    <img src="/images/logo01.png" alt="New Image" width="210px" height="50px">
                 </a>
 
                 <!-- nav links -->
@@ -70,14 +71,18 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
+                                <i class="bi bi-person-fill"></i>
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <img src="/images/profile.png" alt="New Image" width="20px" height="20px">
                                     {{ Auth::user()->name }}
+                                
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <!-- Profile link -->
                                     <a class="dropdown-item" href="{{ route('profile.index') }}">
                                         {{ __('Profile') }}
+                    
                                     </a>
 
                                     <a class="dropdown-item" href="{{ route('logout') }}"

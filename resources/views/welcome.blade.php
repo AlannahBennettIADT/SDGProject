@@ -21,6 +21,42 @@
 
     <!-- Main Content Section -->
     <div class="container">
+        <section class="section py-5">
+        <div class="container">
+        <div class="row">
+            <!-- About STEM Education -->
+            <div class="col-md-4">
+            <div class="card border-primary">
+                <div class="card-body text-center">
+                <h5 class="card-title text-primary">About STEM Education</h5>
+                <p class="card-text">STEM (Science, Technology, Engineering, and Mathematics) education is crucial for preparing students for the challenges of the future.</p>
+                <img src="https://via.placeholder.com/200" class="img-fluid mb-3" alt="STEM Education">
+                </div>
+            </div>
+            </div>
+            <!-- Encouraging STEM Education -->
+            <div class="col-md-4">
+            <div class="card border-primary">
+                <div class="card-body text-center">
+                <h5 class="card-title text-primary">Encouraging STEM Education</h5>
+                <p class="card-text">Educators play a vital role in promoting STEM education.</p>
+                <img src="https://via.placeholder.com/200" class="img-fluid mb-3" alt="Encouraging STEM Education">
+                </div>
+            </div>
+            </div>
+            <!-- Empowering Girls in STEM -->
+            <div class="col-md-4">
+            <div class="card border-primary">
+                <div class="card-body text-center">
+                <h5 class="card-title text-primary">Empowering Girls in STEM</h5>
+                <p class="card-text">Despite progress, gender disparities still exist in STEM fields.</p>
+                <img src="https://via.placeholder.com/200" class="img-fluid mb-3" alt="Empowering Girls in STEM">
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
 
     <!-- Statistics Section -->
     <section class="statistics-section" style="background-color: #f8f9fa; padding: 30px;">

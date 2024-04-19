@@ -7,12 +7,16 @@ use App\Models\Blog;
 
 class BlogController extends Controller
 {
+
+    //gathers all blog models and returns them to index view
     public function index()
     {
         $blogs = Blog::all();
         return view('blogs.index', compact('blogs'));
     }
 
+
+    //returns create blog view
     public function create()
     {
         return view('blogs.create');
