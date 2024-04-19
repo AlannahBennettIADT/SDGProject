@@ -43,6 +43,7 @@ class EventbriteController extends Controller
             $eventDetails = [];
         }
 
+        //testing
         // dd($response->json());
         // dd($eventDetails);
     

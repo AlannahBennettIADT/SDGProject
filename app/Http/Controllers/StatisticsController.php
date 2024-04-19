@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Collection;
 
 
+//this is from the UNStats API - uses cURL instead of HTML request
+
 class StatisticsController extends Controller
 {
     public function getStatistics()

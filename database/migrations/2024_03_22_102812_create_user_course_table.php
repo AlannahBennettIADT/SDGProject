@@ -4,6 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
+
+//pivot table for users and courses
 class CreateUserCourseTable extends Migration
 {
     /**

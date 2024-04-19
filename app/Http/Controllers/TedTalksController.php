@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
+//this does not work lol - i think depreciated 
 class TedTalksController extends Controller
 {
     public function index()

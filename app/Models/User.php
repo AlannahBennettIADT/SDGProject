@@ -74,6 +74,7 @@ class User extends Authenticatable
         return null !== $this->roles()->whereIn('name', $roles)->first();
     }
 
+    //this used for collecting all the courses the user has applied for
     public function applied_courses()
     {
         return $this->belongsToMany(Course::class, 'user_course', 'user_id', 'course_id')->withTimestamps();

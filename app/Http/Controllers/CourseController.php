@@ -58,6 +58,7 @@ class CourseController extends Controller
         return view('courses.show', compact('course'));
     }
 
+    //this is for saving to profile/ applying
     public function apply($id)
     {
         // Check if the user is authenticated
@@ -114,6 +115,8 @@ class CourseController extends Controller
     /**
      * Remove the specified resource from storage.
      */
+
+     //removing course from profile
     public function remove($id)
     {
         // Check if the user is authenticated

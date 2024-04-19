@@ -18,45 +18,51 @@
 </header>
 
 
-
     <!-- Main Content Section -->
     <div class="container">
-        <section class="section py-5">
-        <div class="container">
+    <section class="section">
+    <div class="container py-5">
         <div class="row">
             <!-- About STEM Education -->
             <div class="col-md-4">
-            <div class="card border-primary">
-                <div class="card-body text-center">
-                <h5 class="card-title text-primary">About STEM Education</h5>
-                <p class="card-text">STEM (Science, Technology, Engineering, and Mathematics) education is crucial for preparing students for the challenges of the future.</p>
-                <img src="https://via.placeholder.com/200" class="img-fluid mb-3" alt="STEM Education">
+                <div class="card border-primary mb-4"style="background-color: #E8F6FD;">
+                    <div class="card-body text-center">
+                        <h3 class="card-title py-3">About STEM Education</h3>
+                        <p class="card-text">STEM (Science, Technology, Engineering, and Mathematics) education is crucial for preparing students for the challenges of the future. It fosters critical thinking, problem-solving skills, and innovation.</p>
+                        <p class="card-text">In STEM fields, students learn to apply theoretical knowledge to real-world problems, leading to advancements in various industries.</p>
+                        <img src="/images/stats.png" alt="Resource Image 1" class="img-fluid mb-3"width="450px">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
                 </div>
-            </div>
             </div>
             <!-- Encouraging STEM Education -->
             <div class="col-md-4">
-            <div class="card border-primary">
-                <div class="card-body text-center">
-                <h5 class="card-title text-primary">Encouraging STEM Education</h5>
-                <p class="card-text">Educators play a vital role in promoting STEM education.</p>
-                <img src="https://via.placeholder.com/200" class="img-fluid mb-3" alt="Encouraging STEM Education">
+                <div class="card border-primary mb-4"style="background-color: #E8F6FD;">
+                    <div class="card-body text-center">
+                        <h3 class="card-title py-3">Encouraging STEM Education</h3>
+                        <p class="card-text">Educators play a vital role in promoting STEM education by creating engaging and hands-on learning experiences. They inspire students to pursue careers in STEM fields by demonstrating the practical applications and relevance of STEM concepts.</p>
+                        <p class="card-text">Encouraging diversity and inclusivity in STEM classrooms ensures that all students have equal opportunities to excel and contribute to scientific and technological advancements.</p>
+                        <img src="/images/math.png" alt="Resource Image 1" class="img-fluid mb-3" width="280px">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
                 </div>
-            </div>
             </div>
             <!-- Empowering Girls in STEM -->
             <div class="col-md-4">
-            <div class="card border-primary">
-                <div class="card-body text-center">
-                <h5 class="card-title text-primary">Empowering Girls in STEM</h5>
-                <p class="card-text">Despite progress, gender disparities still exist in STEM fields.</p>
-                <img src="https://via.placeholder.com/200" class="img-fluid mb-3" alt="Empowering Girls in STEM">
+                <div class="card border-primary mb-4"style="background-color: #E8F6FD;">
+                    <div class="card-body text-center">
+                        <h3 class="card-title py-3">Empowering Girls in STEM</h3>
+                        <p class="card-text">Despite progress, gender disparities still exist in STEM fields. Empowering girls in STEM involves providing them with equal access to educational resources, mentorship opportunities, and exposure to female role models in STEM professions.</p>
+                        <p class="card-text">By breaking down stereotypes and challenging societal norms, we can create an inclusive environment where girls feel confident and supported to pursue their interests in science, technology, engineering, and mathematics.</p>
+                        <img src="/images/womenstem.png" alt="Resource Image 1" class="img-fluid mb-3"width="500px">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
                 </div>
             </div>
-            </div>
         </div>
-        </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Statistics Section -->
     <section class="statistics-section" style="background-color: #f8f9fa; padding: 30px;">
@@ -140,22 +146,18 @@
                     <div class="col-md-3">
                         <img src="/images/coursesrs.png" alt="Resource Image 1" class="img-fluid mb-3">
                         <h3>Job Searchers</h3>
-                        <p>Description of the resource goes here.</p>
                     </div>
                     <div class="col-md-3">
                         <img src="/images/mentorshiprs.png" alt="Resource Image 2" class="img-fluid mb-3">
                         <h3>Mentorship Program</h3>
-                        <p>Description of the resource goes here.</p>
                     </div>
                     <div class="col-md-3">
                         <img src="/images/blogrs.png" alt="Resource Image 3" class="img-fluid mb-3">
                         <h3>Useful Blogs </h3>
-                        <p>Description of the resource goes here.</p>
                     </div>
                     <div class="col-md-3">
                         <img src="/images/coursesrs.png" alt="Resource Image 4" class="img-fluid mb-3">
                         <h3>Certified Courses</h3>
-                        <p>Description of the resource goes here.</p>
                     </div>
                 </div>
             </div>
@@ -182,8 +184,6 @@
             </div>
         </div>
     </section>
-
-
 
 
 

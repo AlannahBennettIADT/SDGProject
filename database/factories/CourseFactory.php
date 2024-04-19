@@ -16,6 +16,7 @@ class CourseFactory extends Factory
      */
     public function definition(): array
     {
+        //populating courses with fake data
         return [
             'title' => fake()->sentence,
             'description' => fake()->paragraph,

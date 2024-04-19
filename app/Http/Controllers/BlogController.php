@@ -23,7 +23,7 @@ class BlogController extends Controller
     }
 
 
-
+    //storing blogs w images
     public function store(Request $request)
     {
             // Validate the request data

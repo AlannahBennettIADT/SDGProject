@@ -10,12 +10,16 @@ use Illuminate\Support\Facades\Auth;
 class MentorshipController extends Controller
 {
 
+
+    //returning mentorship index view
     public function index(){
         return view('mentorship.index');
     }
 
 
 
+
+    //attaching mentor role, check to see if role is there
     public function registerMentor(Request $request)
 {
     // Retrieve the currently authenticated user
@@ -37,6 +41,7 @@ class MentorshipController extends Controller
     return redirect()->route('profiles.index', $user->id)->with('success', 'You have successfully applied to become a mentor.');
 }
 
+//attaching mentee role to user, checks to see if it exists with error validation
 public function registerMentee(Request $request)
 {
     // Retrieve the currently authenticated user

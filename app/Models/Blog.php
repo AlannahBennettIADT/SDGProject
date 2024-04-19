@@ -19,6 +19,7 @@ class Blog extends Model
         'blog_image',
     ];
 
+    //blogs have many comments
     public function comments()
 {
     return $this->hasMany(Comment::class);
